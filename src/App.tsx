@@ -2,6 +2,8 @@ import React, {useState} from 'react';
 import './App.css';
 import {ButtonMoney, PropsData} from "./Accordion/ButtonMoney";
 function App() {
+
+
     let [a,setA]=useState(1)
     let onClickAdd = () => {
         setA(a+1)
