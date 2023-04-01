@@ -1,16 +1,15 @@
 import React, {useState} from 'react';
 import './App.css';
 import {ButtonMoney, PropsData} from "./Accordion/ButtonMoney";
+import {splitTest} from "./test/function";
 function App() {
-
-
-    let [a,setA]=useState(1)
+    let [a, setA] = useState(1)
     let onClickAdd = () => {
-        setA(a+1)
+        setA(a + 1)
         console.log(a)
     }
     let onClickNull = () => {
-        a=0
+        a = 0
         setA(a)
         console.log(a)
     }
@@ -39,11 +38,12 @@ function App() {
     }
     return (
         <div className="App">
-            <ButtonMoney rubl={rubl} callback={(value:string) => onClickFilter(value)}/>
+            <ButtonMoney rubl={rubl} callback={(value: string) => onClickFilter(value)}/>
             <span>{a}</span>
             <button onClick={onClickAdd}>A++</button>
             <button onClick={onClickNull}>A=0</button>
         </div>
     );
 }
+
 export default App;
